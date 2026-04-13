@@ -1,4 +1,58 @@
 #include <iosrtream>
+#pragma
+#include <fstream>
+#include <string>
 using namespace std;
+struct Time {
+    int hour, minute, second;
+};
+struct vehicle {
+    int ID;
+    string OwnerName;
+    string PlateNumber;
+    string Type;
+    Time entryTime;
+
+};
+struct slot {
+    int slotID;
+    string slotType;
+    bool isOccupied;
+    int vehicleID;
+};
+struct ticket {
+    int TicketID;
+    int vehicleID;
+    int slotID;
+     Time entryTime;
+     Time exitTime;
+    double fee;
+};
+struct admin {
+    string userName;
+    int password;
+    int id;
+};
+vehicle arr_vehicle[20] = {
+ { 1001 ,  "Fatma" , "tyu-157"  , "car" , { 5 , 15 } },
+ { 1002 , "Mohamed" , "pog-286"  , "motorcycle" , { 2 , 30 } },
+ { 1003 , "Omar" , "umk-872"  , "car" , { 9 , 23 } }
+};
+slot arr_slots[20] = {
+
+ { 1 , "car" , 1 , 1001 } ,
+ { 2 , "motorcycle" , 1 , 1002 },
+ { 3 , "car" , 1 , 1003 }
+};
+ticket arr_ticket[30] = {
+ { 202601 , 1001 , 1 , { 5 , 15 }  , { 8 ,49} },
+ { 202602 , 1002 , 2 , { 2 , 30 }  , { 9 ,17} },
+ { 202603 , 1003 , 3 , { 9 , 23 }  , { 11 ,12} }
+};
+admin arr_admin[5] = {
+    { "mohamedahmed" , 678123 ,322 } ,
+    { "hodaali26" , 3042000 ,323 }
+};
+
 int main(){
 }
